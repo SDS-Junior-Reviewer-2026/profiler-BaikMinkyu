@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SelectionSort {
+public class SelectionSort implements SortServiceLib {
     private int changeCnt = 0;
 
     // selection sort 오름차순 예시코드
@@ -21,6 +21,12 @@ public class SelectionSort {
         }
     }
 
+    @Override
+    public void sort(ArrayList<Integer> arr) {
+        selectionSort(arr);
+    }
+
+    @Override
     public int getChangeCnt() {
         return changeCnt;
     }
